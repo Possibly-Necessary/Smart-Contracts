@@ -72,7 +72,7 @@ contract SecretKeeper { // Defining a contract names 'SecretKeeper'
             require(address(this).balance >= _rewardAmount, "Not enough eth.."); // If this returns fales, then "Not enough eth.." will be returned
             payable(msg.sender).transfer(_rewardAmount);
 
-        } else { // If users do not know the secret message, but have a valid proof, a betting game between this contract and the user
+        } else { // If users do not know the secret message, but have a valid proof, a betting game between this contract and the user takes place
             
             // Call the bet funcion in the coin-toss contract
             Coin coinInstance = Coin(_coinContract); // Instantiate the Coin contract instance and pass in the address of the coin contract
