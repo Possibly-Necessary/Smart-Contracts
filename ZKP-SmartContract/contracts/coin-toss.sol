@@ -23,7 +23,7 @@ contract Coin { // Declaring a contract names 'Coin'
     function bet() payable public {
         require(msg.value == amount); // Checks if the Ether sent through calling this function is equal to the 'amount'
         require(bettors.length < 2); // Restricts that no more than two players can bet
-        blockNumber = block.number + 1; // Predicts/anticipate that the toss will happen in a future block (results cannot be known ahead of time)
+        blockNumber = block.number + 1; // Predicts/anticipates that the toss will happen in a future block (results cannot be known ahead of time)
         bettors.push(payable(msg.sender));
     }
 
